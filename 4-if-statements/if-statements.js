@@ -1,31 +1,28 @@
 //Cat Array
 let cats = [
-	{
-		name: 'Tuna',
-		breed: 'Siamese',
-		gender: 'Female',
-		neutered: true
-	},
-	{
-		name: 'Chester',
-		breed: 'Tabby',
-		gender: 'Male',
-		neutered: false
-		
-	},
-	{
-		name: 'Blue',
-		breed: 'Naked',
-		gender: 'Female',
-		neutered: false
-		
-	}
+  {
+    name: "Tuna",
+    breed: "Siamese",
+    gender: "Female",
+    neutered: true,
+  },
+  {
+    name: "Chester",
+    breed: "Tabby",
+    gender: "Male",
+    neutered: false,
+  },
+  {
+    name: "Blue",
+    breed: "Naked",
+    gender: "Female",
+    neutered: false,
+  },
 ];
 
-//forEach Format Example 
+//forEach Format Example
 // array.forEach(element => console.log(element));
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-
 
 // TODO: Make a function to check if cat is neutered
 // Name the function checkCatisNeutered
@@ -35,3 +32,15 @@ let cats = [
 // 1. Get a list of all the cats and see which one is neutered
 //2. Write if else statement
 //3. Put it in function checkCatIsNeutered
+
+const checkCatIsNeutered = () => {
+  cats.forEach((cat) => {
+    if (cat.neutered == false) {
+      console.log(`Take ${cat.name} to the vet`);
+    } else {
+      console.log(null);
+    }
+  });
+};
+
+checkCatIsNeutered();
